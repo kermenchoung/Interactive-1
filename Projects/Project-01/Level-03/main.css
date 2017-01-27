@@ -1,0 +1,44 @@
+body{
+
+	background:green;
+}
+
+
+
+p{
+color: red;
+font-style: italic; 
+}
+
+.static{
+position: static;
+}
+
+.box-1{
+	float: left;
+	width: 500px;
+	height: 300px;
+	margin: 25px;
+	background-color: #dadada;
+
+
+	padding: 10px;
+border: 10px solid red; margin: 20px;
+
+
+}
+
+.box-2{
+	float: right;
+	width: 500px;
+	height: 300px;
+	margin: 25px;
+	background-color: #dadada;
+	padding: 10px;
+border: 10px solid red; margin: 20px;
+
+
+
+}
+
+
