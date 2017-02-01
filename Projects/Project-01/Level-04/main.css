@@ -16,7 +16,7 @@ body{
 	display: inline-block;
 	border:1px solid black;
 	vertical-align: top;
-	transition: left 2s ease; 
+	
 	position: relative;
 	top: 0px;
 	float:right;
@@ -44,7 +44,7 @@ body{
 	display: inline-block;
 	border:1px solid #dadada;
 	vertical-align: top;
-	transition:top 2s ease; 
+
 	position: relative;
 	
 	top: 0px;
@@ -66,7 +66,6 @@ body{
 	border:1px solid black;
 	vertical-align: top;
 	
-	transition: left 2s ease;
 	position: relative;
 	top: 0px;
 
@@ -78,7 +77,7 @@ body{
 	display: inline-block;
 	border:1px solid black;
 	vertical-align: top;
-	 transition: left 2s ease; 
+ 
 	position: relative;
 	top: 0px;
 
@@ -90,7 +89,7 @@ body{
 	display: inline-block;
 	border:1px solid black;
 	vertical-align: top;
-	transition: left 2s ease; 
+
 	position: relative;
 	top: 0px;
 
