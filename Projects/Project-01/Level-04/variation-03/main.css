@@ -2,52 +2,66 @@ body{
 	box-sizing: border-box;
 }
 
-.container{
+.container-left{
 	margin: 10px;
 	transition:width 2s ease;
 	width: 100px;
-	height: 100px;
-	background: #0000ff;
-	float: left;
+	height: 200px;
+	background: #dadada;
+	
+
 	
 }
 
+.container-left:hover{
+	width: 300px;
+}
 
-.container:hover{
+.container-right{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	margin: 10px;
+	transition:width 2s ease;
+	width: 100px;
+	height: 200px;
+	background: #dadada;	
+}
+
+.container-right:hover{
+	width: 300px;
+}
+
+.box-0{
+	
+	width: 300px;
+	height: 100px;
+	background: #0000ff;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 10px;
+	position: relative;
+	
+	float: left;
+	margin: 15px;
+}
+
+
+.box-0:hover{
 	width: 300px;
 }
 
 
 
-#box-0{
-	
-	width:100px;
-	height:200px;
-	margin: 10px;
-	padding: 10px;
-	display: inline-block;
-	border:1px solid black;
-	vertical-align: top;
-	
-	position: relative;
-	top: 0px;
-	float:right;
-
-}
-
-
-.box-0:hover{
-	top: 200px;
-
-}
-
-
-
 .box-1{
-	transition:width 2s ease;
-	width: 100px;
+	
+	width: 300px;
 	height: 100px;
 	background: #0000ff;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	
 	float: left;
 	margin: 15px;
 }
@@ -57,11 +71,7 @@ body{
 	width: 300px;
 }
 
-
-
-
-
-
+/*
 
 #box-1{
 	
@@ -86,65 +96,81 @@ body{
 }
 */
 
-#box-2{
+.box-2{
 	
-	width:100px;
-	height:200px;
+	
+	width: 100px;
+	height: 100px;
+	background: #0000ff;
 	display: inline-block;
-	border:1px solid black;
-	vertical-align: top;
-	
 	position: relative;
-	top: 0px;
+	float: left;
+	margin: 15px;
+}
 
+
+
+.box-2:hover{
+	width: 200px;
 }
 #box-3{
-	
-	width:100px;
-	height:200px;
-	display: inline-block;
-	border:1px solid black;
-	vertical-align: top;
- 
-	position: relative;
-	top: 0px;
+
+	width: 100px;
+	height: 100px;
+	background: #0000ff;
+	float: right;
+	margin: 15px;
+	transition:width 2s ease;
+}
+
+
+#box-3:hover{
+	width: 200px;
 
 }
+
+
 #box-4{
+
+	width: 100px;
+	height: 100px;
+	background: #0000ff;
+	float: right;
+	margin: 15px;
+	transition:width 2s ease;
 	
-	width:100px;
-	height:200px;
-	display: inline-block;
-	border:1px solid black;
-	vertical-align: top;
-
-	position: relative;
-	top: 0px;
-
 }
 
-#box-5{
-	
-	width:100px;
-	height:200px;
-	display: inline-block;
-	border:1px solid black;
-	vertical-align: top;
-	/* transition: top 2s ease; */
-	position: relative;
-	top: 0px;
 
+#box-4:hover{
+	width: 200px;
 }
 
-#box-6{
+.box-5{
 	
-	width:100px;
-	height:200px;
-	display: inline-block;
-	border:1px solid black;
-	vertical-align: top;
-	/* transition: top 2s ease; */
-	position: relative;
-	top: 0px;
-
+	width: 100px;
+	height: 100px;
+	background: #0000ff;
+	float: right;
+	margin: 15px;
 }
+
+.box-5:hover{
+	width: 200px;
+}
+.box-6{
+	
+	width: 100px;
+	height: 100px;
+	background: #0000ff;
+	float: right;
+	margin: 15px;
+}
+
+
+.box-6:hover{
+	width: 200px;
+}
+
+
+
