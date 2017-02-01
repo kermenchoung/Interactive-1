@@ -16,12 +16,24 @@ body{
 	display: inline-block;
 	border:1px solid black;
 	vertical-align: top;
-	/* transition: top 2s ease; */
+	transition: left 2s ease; 
 	position: relative;
 	top: 0px;
 	float:right;
 
 }
+
+
+.box-0:hover{
+	top: 200px;
+
+}
+
+
+
+
+
+
 
 #box-1{
 	
@@ -32,13 +44,14 @@ body{
 	display: inline-block;
 	border:1px solid #dadada;
 	vertical-align: top;
-	/* transition: top 2s ease; */
+	transition:top 2s ease; 
 	position: relative;
+	
 	top: 0px;
 
 }
 
-/*
+
 .box-1:hover{
 	top: 200px;
 
@@ -52,7 +65,8 @@ body{
 	display: inline-block;
 	border:1px solid black;
 	vertical-align: top;
-	/* transition: top 2s ease; */
+	
+	transition: left 2s ease;
 	position: relative;
 	top: 0px;
 
@@ -64,7 +78,7 @@ body{
 	display: inline-block;
 	border:1px solid black;
 	vertical-align: top;
-	/* transition: top 2s ease; */
+	 transition: left 2s ease; 
 	position: relative;
 	top: 0px;
 
@@ -76,7 +90,7 @@ body{
 	display: inline-block;
 	border:1px solid black;
 	vertical-align: top;
-	/* transition: top 2s ease; */
+	transition: left 2s ease; 
 	position: relative;
 	top: 0px;
 
