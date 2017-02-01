@@ -4,7 +4,19 @@ body{
 
 .container{
 	margin: 10px;
+	transition:width 2s ease;
+	width: 100px;
+	height: 100px;
+	background: #0000ff;
+	float: left;
+	
 }
+
+
+.container:hover{
+	width: 300px;
+}
+
 
 
 #box-0{
@@ -27,6 +39,22 @@ body{
 .box-0:hover{
 	top: 200px;
 
+}
+
+
+
+.box-1{
+	transition:width 2s ease;
+	width: 100px;
+	height: 100px;
+	background: #0000ff;
+	float: left;
+	margin: 15px;
+}
+
+
+.box-1:hover{
+	width: 300px;
 }
 
 
