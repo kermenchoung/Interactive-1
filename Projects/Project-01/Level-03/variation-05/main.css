@@ -1,12 +1,29 @@
 .box-1{
 	
-	width:100px;
+	width:200px;
 	height:200px;
-	display: inline-block;
+	display:inherit;
 	border:1px solid black;
 	vertical-align: top;
 	transition: top 2s ease;
-	position: relative;
+	position:absolute;
+	top: 0px;
+
+}
+
+.box-1:hover{
+	top: 200px;
+
+}
+
+.box-2{
+	width:100px;
+	height:200px;
+	display:inherit;
+	border:1px solid black;
+	vertical-align: top;
+	transition: top 2s ease;
+	position:absolute;
 	top: 0px;
 
 }
