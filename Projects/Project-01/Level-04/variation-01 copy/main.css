@@ -8,7 +8,6 @@ body{
 	width: 100px;
 	height: 200px;
 	background: #dadada;
-
 	
 
 	
@@ -19,13 +18,14 @@ body{
 }
 
 .container-right{
-	
+	position: relative;
+	top: 0px;
+	right: 0px;
 	margin: 10px;
 	transition:width 2s ease;
 	width: 100px;
 	height: 200px;
 	background: #dadada;	
-
 }
 
 .container-right:hover{
