@@ -18,9 +18,8 @@ body{
 }
 
 .container-right{
-	position: absolute;
-	top: 0px;
-	right: 0px;
+	
+	
 	margin: 10px;
 	transition:width 2s ease;
 	width: 100px;
