@@ -90,10 +90,12 @@ body{
 }
 .box-3{
 
-	width: 100px;
+	width: 300px;
 	height: 100px;
 	background: #0000ff;
 	display: inline-block;
+	vertical-align: top;
+	padding-left: 10px;
 	position: relative;
 	float: right;
 	margin: 15px;
@@ -109,14 +111,15 @@ body{
 
 .box-4{
 
-	width: 100px;
+	width: 300px;
 	height: 100px;
 	background: #0000ff;
 	display: inline-block;
+	vertical-align: top;
+	padding-left: 10px;
 	position: relative;
 	float: right;
 	margin: 15px;
-
 
 
 	
@@ -130,9 +133,13 @@ body{
 
 #box-5{
 	
-	width: 100px;
+	width: 300px;
 	height: 100px;
 	background: #0000ff;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 10px;
+	position: relative;
 	float: right;
 	margin: 15px;
 }
@@ -142,9 +149,13 @@ body{
 }
 .box-6{
 	
-	width: 100px;
+	width: 300px;
 	height: 100px;
 	background: #0000ff;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 10px;
+	position: relative;
 	float: right;
 	margin: 15px;
 }
