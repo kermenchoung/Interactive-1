@@ -97,13 +97,12 @@ body{
 	position: relative;
 	float: right;
 	margin: 15px;
-	
-	
+
 }
 
 
 #box-3:hover{
-	width: 200px;
+	width: 300px;
 
 }
 
@@ -113,9 +112,14 @@ body{
 	width: 100px;
 	height: 100px;
 	background: #0000ff;
+	display: inline-block;
+	position: relative;
 	float: right;
 	margin: 15px;
-	transition:width 2s ease;
+
+
+
+	
 	
 }
 
