@@ -10,7 +10,6 @@ body{
 	border-left: 100px solid transparent;
 	border-right: 100px solid transparent;
 	border-bottom: 300px solid red;
-	animation: lightSpeedIn
 
 }
 
@@ -44,15 +43,20 @@ body{
 	display: inline-block;
 	border:1px solid black;
 	vertical-align: top;
+	transition:width 2s ease;
 	
 	position: relative;
 	top: 0px;
 	float:right;
 
 }
+#box-0:hover{
+	width: 300px;
+}
+*/
 
 
-.box-0:hover{
+/*.box-0:hover{
 	top: 200px;
 
 }
@@ -72,6 +76,7 @@ body{
 .box-1:hover{
 	width: 300px;
 }
+*/
 
 
 
@@ -96,7 +101,7 @@ body{
 }
 
 
-.box-1:hover{
+#box-1:hover{
 	top: 200px;
 
 }
@@ -146,7 +151,7 @@ body{
 	display: inline-block;
 	border:1px solid black;
 	vertical-align: top;
-	/* transition: top 2s ease; */
+	 transition: top 2s ease; 
 	position: relative;
 	top: 0px;
 
