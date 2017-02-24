@@ -1,49 +1,26 @@
 #p1{
-	color:#133773;
-
-
+color:#133773;
 font-size: 48px;
-
-
-
-
-
 font-family: Abel;
-
 font-weight: regular;
-
 font-size: 48px;
-
 text-transform:uppercase;
-
 text-decoration: underline;
-
 text-align:left;
-
 }
 
-
-
 #p2{
-	color:#8cad3c;
-
-
+color:#8cad3c;
 font-size: 48px;
-
-
-
-
-
 font-family: Abel;
-
 font-weight: regular;
-
 font-size: 48px;
-
 text-transform: uppercase;
-
 text-decoration: underline;
-
 text-align:right;
+}
 
+.box1{
+	width:50px;
+	height: 50px;
 }
