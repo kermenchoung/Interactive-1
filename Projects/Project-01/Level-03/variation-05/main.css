@@ -1,34 +1,49 @@
-.box-1{
-	
-	width:200px;
-	height:200px;
-	display:inherit;
-	border:1px solid black;
-	vertical-align: top;
-	transition: top 2s ease;
-	position:absolute;
-	top: 0px;
+#p1{
+	color:#133773;
+
+
+font-size: 48px;
+
+
+
+
+
+font-family: Abel;
+
+font-weight: regular;
+
+font-size: 48px;
+
+text-transform: uppercase;
+
+text-decoration: underline;
+
+text-align:left;
 
 }
 
-.box-1:hover{
-	top: 200px;
 
-}
 
-.box-2{
-	width:100px;
-	height:200px;
-	display:inherit;
-	border:1px solid black;
-	vertical-align: top;
-	transition: top 2s ease;
-	position:absolute;
-	top: 0px;
+#p2{
+	color:#8cad3c;
 
-}
 
-.box-1:hover{
-	top: 200px;
+font-size: 48px;
+
+
+
+
+
+font-family: Abel;
+
+font-weight: regular;
+
+font-size: 48px;
+
+text-transform: uppercase;
+
+text-decoration: underline;
+
+text-align:right;
 
 }
