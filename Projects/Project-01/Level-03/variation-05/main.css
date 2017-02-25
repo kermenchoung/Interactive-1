@@ -1,26 +1,31 @@
-#p1{
-color:#133773;
-font-size: 48px;
-font-family: Abel;
-font-weight: regular;
-font-size: 48px;
-text-transform:uppercase;
-text-decoration: underline;
-text-align:left;
+body {background-color: powderblue;}
+
+
+.container{
+    width:750px;
+    height:750px;
+    margin:40vh auto auto auto;
+    
+    
+    
+    
+    
 }
 
-#p2{
-color:#8cad3c;
-font-size: 48px;
-font-family: Abel;
-font-weight: regular;
-font-size: 48px;
-text-transform: uppercase;
-text-decoration: underline;
-text-align:right;
+
+.box {
+    width:300px;
+    height: 300px;
+    display: inline-block;
+    text-align: center;
+    
+    
+    
+    
+    
 }
 
-.box-1{
-	width:50px;
-	height: 50px;
+.right{float:right;
+    
+    
 }

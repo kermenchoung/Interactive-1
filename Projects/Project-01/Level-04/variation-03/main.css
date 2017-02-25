@@ -1,169 +1,31 @@
-body{
-	box-sizing: border-box;
-}
+body {background-color: powderblue;}
 
-.container-left{
-	margin: 10px;
-	transition:width 2s ease;
-	width: 100px;
-	height: 200px;
-	background: #dadada;
-	
 
-	
-}
-
-.container-left:hover{
-	width: 300px;
-}
-
-.container-right{
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	margin: 10px;
-	transition:width 2s ease;
-	width: 100px;
-	height: 200px;
-	background: #dadada;	
-}
-
-.container-right:hover{
-	width: 300px;
-}
-
-.box-0{
-	
-	width: 300px;
-	height: 100px;
-	background: #0000ff;
-	display: inline-block;
-	vertical-align: top;
-	padding-left: 10px;
-	position: relative;
-	float: left;
-	margin: 15px;
+.container{
+    width:750px;
+    height:auto;
+    margin:40vh auto auto auto;
+    
+    
+    
+    
+    
 }
 
 
-.box-0:hover{
-	width: 300px;
+.box {
+    width:20%;
+  
+    display: inline-block;
+    text-align: center;
+    
+    
+    
+    
+    
 }
 
-
-
-.box-1{
-	
-	width: 300px;
-	height: 100px;
-	background: #0000ff;
-	display: inline-block;
-	vertical-align: top;
-	position: relative;
-	float: left;
-	margin: 15px;
+.right{float:right;
+    
+    
 }
-
-
-.box-1:hover{
-	width: 300px;
-}
-
-
-
-.box-2{
-	
-	
-	width: 100px;
-	height: 100px;
-	background: #0000ff;
-	display: inline-block;
-	position: relative;
-	float: left;
-	margin: 15px;
-}
-
-
-
-.box-2:hover{
-	width: 200px;
-}
-#box-3{
-
-	width: 300px;
-	height: 100px;
-	background: #0000ff;
-	display: inline-block;
-	vertical-align: top;
-	padding-left: 10px;
-	position: relative;
-	float: right;
-	margin: 15px;
-
-}
-
-
-#box-3:hover{
-	width: 300px;
-
-}
-
-
-#box-4{
-
-	width: 300px;
-	height: 100px;
-	background: #0000ff;
-	display: inline-block;
-	vertical-align: top;
-	padding-left: 10px;
-	position: relative;
-	float: right;
-	margin: 15px;
-
-
-	
-	
-}
-
-
-#box-4:hover{
-	width: 200px;
-}
-
-#box-5{
-	
-	width: 300px;
-	height: 100px;
-	background: #0000ff;
-	display: inline-block;
-	vertical-align: top;
-	padding-left: 10px;
-	position: relative;
-	float: right;
-	margin: 15px;
-}
-
-#box-5:hover{
-	width: 200px;
-}
-#box-6{
-	
-	width: 300px;
-	height: 100px;
-	background: #0000ff;
-	display: inline-block;
-	vertical-align: top;
-	padding-left: 10px;
-	position: relative;
-	float: right;
-	margin: 15px;
-}
-
-
-#box-6:hover{
-	width: 200px;
-}
-
-
-
