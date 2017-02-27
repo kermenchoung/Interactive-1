@@ -144,7 +144,7 @@
     height: 180px;
     background: transparent;
     position: absolute;
-    top: 150px;
+    top: 120px;
     left: 500px;
     z-index: 11;
     transform: rotate(-30deg);
@@ -152,7 +152,7 @@
 
 p {
     color: dimgrey;
-    font-family: Abel;
+    font-family:DDT;
     font-weight: normal;
     font-size: 12px;
     text-transform: none;
@@ -171,9 +171,9 @@ p {
 }
 
 h1 {
-    font-family:Abel;
+    font-family:DDT;
   
-    font-size: 46px;
+    font-size: 36px;
     text-align: center;
     text-transform: uppercase;
 }
