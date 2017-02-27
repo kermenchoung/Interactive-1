@@ -1,154 +1,36 @@
-body{
-	box-sizing: border-box;
+body {
+    background-color: lightsteelblue;
 }
 
-
-/*
-
-.container{
-	margin: 10px;
-	transition:width 2s ease;
-	width: 100px;
-	height: 100px;
-	background: #dadada;
-	float: left;
-	
+.canvas {
+    width: 950px;
+    height: 800px;
+    margin: 100px auto;
+    background: white;
+    position: relative;
+    background-color: lightsteelblue;
 }
 
-
-.container:hover{
-	width: 300px;
-}
-*/
-
-
-
-#box-0{
-	
-	width:100px;
-	height:200px;
-	margin: 10px;
-	padding: 10px;
-	display: inline-block;
-	border:1px solid black;
-	vertical-align: top;
-	
-	position: relative;
-	top: 0px;
-	float:right;
-
+.container {
+    width: 950px;
+    height: auto;
+    margin: 40vh auto auto auto;
 }
 
-
-.box-0:hover{
-	top: 200px;
-
+.box-1 {
+    width: 100px;
+    height: 200px;
+    display: inline-block;
+    background-color: steelblue;
+    vertical-align: top;
+    transition: top 2s ease;
+    position: relative;
+    top: 0px;
+    text-align: center;
+    font-family: DDT;
+    font-size: 18px;
 }
 
-
-
-.box-1{
-	transition:width 2s ease;
-	width: 100px;
-	height: 100px;
-	background: #0000ff;
-	float: left;
-	margin: 15px;
-}
-
-
-.box-1:hover{
-	width: 300px;
-}
-
-
-
-
-
-
-
-#box-1{
-	
-	width:100px;
-	height:200px;
-	margin: 10px;
-	padding-left: 10px;
-	display: inline-block;
-	border:1px solid #dadada;
-	vertical-align: top;
-
-	position: relative;
-	
-	top: 0px;
-
-}
-
-
-.box-1:hover{
-	top: 200px;
-
-}
-
-
-#box-2{
-	
-	width:100px;
-	height:200px;
-	display: inline-block;
-	border:1px solid black;
-	vertical-align: top;
-	
-	position: relative;
-	top: 0px;
-
-}
-#box-3{
-	
-	width:100px;
-	height:200px;
-	display: inline-block;
-	border:1px solid black;
-	vertical-align: top;
- 
-	position: relative;
-	top: 0px;
-
-}
-#box-4{
-	
-	width:100px;
-	height:200px;
-	display: inline-block;
-	border:1px solid black;
-	vertical-align: top;
-
-	position: relative;
-	top: 0px;
-
-}
-
-#box-5{
-	
-	width:100px;
-	height:200px;
-	display: inline-block;
-	border:1px solid black;
-	vertical-align: top;
-	/* transition: top 2s ease; */
-	position: relative;
-	top: 0px;
-
-}
-
-#box-6{
-	
-	width:100px;
-	height:200px;
-	display: inline-block;
-	border:1px solid black;
-	vertical-align: top;
-	/* transition: top 2s ease; */
-	position: relative;
-	top: 0px;
-
+.box-1:hover {
+    top: 200px;
 }
