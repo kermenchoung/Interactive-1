@@ -6,7 +6,7 @@ var imgs = [];
 
 function preload(){
     imgs[0] = loadImage("158.jpg");
-    imgs[1] = loadImage("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Ffarm2.staticflickr.com%2F1385%2F1262833993_b4b2ec0ba9_z.jpg&f=1");
+    imgs[1] = loadImage("158.jpg");
 }
 
 function setup(){
