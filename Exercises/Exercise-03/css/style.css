@@ -1,0 +1,104 @@
+@import url();
+
+body {
+
+}
+
+.decorative{
+	position:absolute;
+	top:45%;
+	left:8px;
+	width: 100%;
+}
+
+#square1{
+	width:600px;
+	height:600px;
+	background:#8393ca;
+	display: inline-block;
+	opacity:0.5;
+	margin-right: 10px;
+}
+
+#square2{
+	width: 500px;
+	height:500px;
+	background:#d86bb8;
+	
+	opacity:0.5;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+/* Text
+-------------------------------------------------- */
+
+
+/* Image
+-------------------------------------------------- */
+
+
+/*Shapes
+-------------------------------------------------- */
+
+
+/* iPad 
+-------------------------------------------------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+  /* text */
+
+
+  /* image */
+
+}
+
+/* Mobile
+-------------------------------------------------- */
+
+@media screen and (max-width: 768px) {
+
+  /* text */
+	h3{
+	font-family: sans-serif;
+	color:#F39C12;
+	}
+
+	h1{
+	font-family: sans-serif;
+	color: #58D68D;
+	}
+
+	h5{
+	font-family: sans-serif;
+	color: #58D68D;
+	}
+
+  /* image */
+	img{
+	width:40%;
+	margin-right:auto;
+	margin-left:auto;
+  	}
+
+  	#square1{
+	width: 200px;
+	height:200px;
+	background:#F39C12;
+	border-radius: 10px;
+	opacity:0.7;
+	display: inline-block;
+	}
+
+	#square2{
+	width: 200px;
+	height:200px;
+	background:#F39C12;
+	
+	opacity:0.7;
+	display: inline-block;
+	}
+
+}
+
+
