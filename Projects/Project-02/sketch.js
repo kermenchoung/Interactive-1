@@ -6,7 +6,7 @@ var imgs = [];
 
 function preload(){
     imgs[0] = loadImage("158.jpg");
-    imgs[1] = loadImage("wrong_image.jpg");
+    imgs[1] = loadImage("wrong_image");
 }
 
 function setup(){
