@@ -6,10 +6,6 @@ var imgs = [];
 
 function preload(){
     imgs[0] = loadImage("158.jpg");
-    imgs[4] = loadImage("258.jpg");
-    imgs[2] = loadImage("358.jpg");
-    imgs[3] = loadImage("458.jpg");
-   
     imgs[1] = loadImage("wrong_image.jpg");
 }
 
