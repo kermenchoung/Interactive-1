@@ -67,7 +67,7 @@ function mouseClicked(){
     handleClick();
 }
 
-function touchStarted(){
+function touchEnded(){
     handleClick();
 }
 
