@@ -1,13 +1,90 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
         <title></title>
-        <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
-        <script language="javascript" type="text/javascript" src="sketch.js"></script>
-        <style> body {padding: 0; margin: 0;} </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+        <style>
+            html,body{ height: 100%; }
+            section { display: inline-block; vertical-align: middle; }
+            #draggables { width: 78%; }
+            #draggables img { /*width: 100%;*/ display: block; margin-bottom: 15px; cursor: -webkit-grab; cursor: grab; }
+            #draggables img:active { cursor: -webkit-grabbing; cursor: grabbing; }
+            #droppable { border: 2px solid red;  width: 18%; height: 100%; position: absolute; top: 5px; right: 5px;}
+            .smallbag { float: left; }
+        </style>
     </head>
     <body>
+    <button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+
+function myFunction() {
+    var d = new Date();
+    var n = d.getTime();
+    document.getElementById("demo").innerHTML = n;
+}
+
+var bags = [];
+
+$(document).ready(function(){
+    $("#draggables img").draggable();
+    bags.push($("#draggables img"));
+
+    $("#droppable").droppable({
+        drop: function(event, ui){
+            bags.splice(bags.indexOf($(ui.draggable)));
+            $(ui.draggable).remove();
+            setTimeout(function() { 
+                for(var i=0;i<20;i++)
+                {
+                    var img = $('<img class="smallbag">');
+                    img.attr('src', 'smallbag.png'); //$(this).imgurl);
+                    img.appendTo("#draggables");
+
+                    bags.push(img);
+                    //img.draggable();
+                    //$(this).html(ui.draggable.remove().html());
+                }
+                $("#draggables img").draggable();
+
+            }, 1000);
+            //$("#draggables img").hide();
+        }
+    });
+
+
+    setInterval(function() {  
+        for(var i=0;i<bags.length; i++)
+        {
+            //bags[i].
+        }
+    }, 100);
+
+});
+
+
+</script>
+        <section id="draggables">
+            <img src="smallbag.png" />
+        </section>
+
+        <section id="droppable">
+
+        </section>
+
+       
     </body>
 </html>
+
+
+
+

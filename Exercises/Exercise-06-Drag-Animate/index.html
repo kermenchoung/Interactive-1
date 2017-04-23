@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <style>
+            section { display: inline-block; vertical-align: middle; }
+            #draggables { width: 25vw; }
+            #draggables img { width: 100%; display: block; margin-bottom: 15px; cursor: -webkit-grab; cursor: grab; }
+            #draggables img:active { cursor: -webkit-grabbing; cursor: grabbing; }
+            #droppable { width: 70vw; }
+            #droppable img { width: 100%; transform: scale(0.20); }
+
+            #droppable img.to36 { animation: to36 0.5s forwards; }
+            #droppable img.to52 { animation: to52 0.5s forwards; }
+            #droppable img.to68 { animation: to68 0.5s forwards; }
+            #droppable img.to84 { animation: to84 0.5s forwards; }
+            #droppable img.to100 { animation: to100 0.5s forwards; }
+
+            @keyframes to36 { 0% { transform: scale(0.20); } 100% { transform: scale(0.36); } }
+            @keyframes to52 { 0% { transform: scale(0.40); } 100% { transform: scale(0.52); } }
+            @keyframes to68 { 0% { transform: scale(0.60); } 100% { transform: scale(0.68); } }
+            @keyframes to84 { 0% { transform: scale(0.60); } 100% { transform: scale(0.84); } }
+            @keyframes to100 { 0% { transform: scale(0.80); } 100% { transform: scale(1.0); } }
+        </style>
+    </head>
+    <body>
+        <section id="draggables">
+            <img src="1.jpg" />
+            <img src="2.jpg" />
+            <img src="3.jpg" />
+            <img src="4.jpg" />
+            <img src="5.jpg" />
+        </section>
+        <section id="droppable">
+            <img src="hall5.jpg" />
+        </section>
+        <script>
+
+$(document).ready(function(){
+
+    $("#draggables img").draggable();
+    $("#droppable img").droppable({
+        drop: function(event, ui){
+            $(this).html(ui.draggable.remove().html());
+            if ($(this).hasClass("to36")){
+                $(this).removeClass("to36").addClass("to52");
+            } else
+            if ($(this).hasClass("to52")){
+                $(this).removeClass("to52").addClass("to68");
+            } else
+            if ($(this).hasClass("to68")){
+                $(this).removeClass("to68").addClass("to84");
+            } else
+            if ($(this).hasClass("to84")){
+                $(this).removeClass("to84").addClass("to100");
+            } else {
+                $(this).addClass("to36");
+            }
+        }
+    });
+
+});
+
+        </script>
+    </body>
+</html>
