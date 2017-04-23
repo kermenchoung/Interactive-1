@@ -62,8 +62,7 @@ function orderDraw(){
     }
 }
 
-function mouseClicked.touch-punch(){ 
-
+function mouseClicked(){
     if (chaos){
         chaos = false;
         order = true;
