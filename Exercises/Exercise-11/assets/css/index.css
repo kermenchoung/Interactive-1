@@ -606,7 +606,7 @@ h1 + .intro {
 /* =====  3 Site Layout  ==================================================== */
 
 html {
-  background: #fffff8;
+  background: #3E9DA6;
   color: #261e66;
   font: normal 400 1.5em/1.5 "Vesper Libre", Georgia, serif;
   /* Always show the vertical scrollbar to prevent `jumps`
