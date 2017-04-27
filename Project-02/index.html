@@ -14,18 +14,19 @@
             html,body{ height: 100%; }
             section { display: inline-block; vertical-align: middle; }
             #draggables { width: 78%; }
-            #draggables img { /*width: 100%;*/ display: block; margin-bottom: 15px; cursor: -webkit-grab; cursor: grab; }
+            #draggables img { /*width: 100%;*/ display: block; margin-bottom: 15px; top: 400px; left: 500px; cursor: -webkit-grab; cursor: grab; }
             #draggables img:active { cursor: -webkit-grabbing; cursor: grabbing; }
-            #droppable { border: 1px ;  width: 18%; height: 100%; position: absolute; top: 5px; right: 5px; left: 700px;}
+            #droppable { border: 1px ;  width: 18%; height: 100%; position: absolute; top: 150px; right: 5px; left: 740px;}
             .smallbag { float: left; }
+            
 
 
         </style>
     </head>
     <body>
- <!--<body background="field.png" style="height: 100%, background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover">-->
+ <body background="field.png" style=" background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover">
 
- <body background="field.png" style="height: 100%, background-position: center center ; background-repeat: no-repeat; background-attachment: fixed; ">
+ <!--<body background="field.png" style="height: 100%, background-position: center center ; background-repeat: no-repeat; background-attachment: fixed; ">-->
 
  
 
@@ -43,10 +44,11 @@
 
 
 
-<div class="threesixtyImageWrapper" id="threesixty_204803245_01" style="height: 0px; width: 783px;">
+<!--<div class="threesixtyImageWrapper" id="threesixty_204803245_01" style="height: 0px; width: 783px;">
 <img class="main360Image openHandCursor" height="400" width="400" src="http://www.thdstatic.com/spin/45/204803245/204803245_S01_R01_C01.jpg?profile=600" style="height: 0px; width: 0px; display: block; position: relative; top: 0px; left: 0px; margin-left: auto; margin-right: auto; margin-top: 0px;" id="threesixtyImage">
                                                                                                              
 </div>
+-->
 
 <script>
 
@@ -61,6 +63,8 @@ var bags = [];
 $(document).ready(function(){
     $("#draggables img").draggable();
     bags.push($("#draggables img"));
+
+     $("#droppable").draggable();
 
     $("#droppable").droppable({
         drop: function(event, ui){
@@ -103,9 +107,12 @@ $(document).ready(function(){
         </section>
 
         <section id="droppable">
-        <img src="bin.png" />
-
+            <img src="bin.png" />
         </section>
+
+       
+
+
 
 
 
