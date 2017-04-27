@@ -64,6 +64,8 @@ $(document).ready(function(){
     $("#draggables img").draggable();
     bags.push($("#draggables img"));
 
+     $("#droppable").draggable();
+
     $("#droppable").droppable({
         drop: function(event, ui){
             bags.splice(bags.indexOf($(ui.draggable)));
