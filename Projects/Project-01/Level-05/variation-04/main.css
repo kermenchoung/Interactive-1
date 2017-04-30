@@ -1,0 +1,40 @@
+body {background-color: powderblue;}
+
+
+.container{
+    width:750px;
+    height:750px;
+    margin:40vh auto auto auto;
+    
+ }
+
+
+.box {
+	transition: background 2s ease;
+	background: solid red;
+    width:300px;
+    height: 300px;
+    display: inline-block;
+    text-align: center;
+  }
+
+.right{float:right;
+    
+    
+}
+
+.circle{
+transition: background 2s ease;
+width: 100px;
+height: 100px;
+background: solid red;
+-moz-border-radius: 50px;
+-webkit-border-radius: 50px;
+border-radius: 50px;
+float: left;
+margin: 15px;
+}
+.circle:hover{
+background: solid black;
+}
+
