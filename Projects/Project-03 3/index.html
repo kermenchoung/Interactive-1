@@ -28,9 +28,7 @@
             #draggables { width: 78%; }
             #draggables img { /*width: 100%;*/ display: block; margin-bottom: 15px; top: 400px; left: 500px; cursor: -webkit-grab; cursor: grab; }
             #draggables img:active { cursor: -webkit-grabbing; cursor: grabbing; }
-            #droppable { border: px ;  width: 18%; height: 100%; position:fixed; right: 5px; left: 740px; }
-            .smallbag { float: left; }
-        
+           
 
         </style>
     </head>
@@ -64,12 +62,10 @@
 
 <script>
 
+window.onresize = function(){}
 
-$(document).ready(function(){
-       $('.drag').draggable();
-       $('.drag').click(function(){
-       });
-       });
+
+
 
      window.alert("Every second there are about 20 visitors of IKEA worldwide. Each of the visitors is given a standard shopping bag at the entrance. Each purchase contributes to the construction of a new store at the suburbs of big cities. Dublin is one of them. Help me to clean this field in my neighbourhood from the bags. Drop them to the Bin...Only to experience helplessness and inevitability of Endgame which is coming soon.");
 
