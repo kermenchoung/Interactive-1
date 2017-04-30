@@ -1,0 +1,427 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+  		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  		<script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+
+  		<style>
+/*DRAGGABLE */
+  			#draggable{ 
+  				width: 150px;
+  				height: 50px;
+  				padding: 0.5em;
+          background-color: #000000;
+          font-style: sans-serif;
+          color: #ffffff;
+  			 }
+
+/*DROPPABLE */
+
+         #droppable, #droppable2, #droppable3, #droppable4{
+           width: 150px;
+          height: 150px;
+          padding: 0.5em;
+          /*background-color: #ffffff;*/
+          border: #000000 1px solid;
+          font-style: sans-serif;
+          color: #000000;
+         }
+
+         #droppable5{
+          width: 150px;
+          height: 150px;
+          padding: 0.5em;
+         }
+
+         #draggable:hover{
+          cursor: cell;
+         }
+
+         #droppable:hover{
+          cursor: move;
+         }
+
+/*STYLES */
+        .sorbet1{
+          background-color: #F79A8F;
+        }
+
+        .sorbet2{
+          background-color: #F79A8F;
+        }
+
+        .sorbet3{
+          background-color: #F7AB8F;
+        }
+
+        .sorbet4{
+          background-color: #8FF7DF;
+        }
+
+        .blue-border{
+          width: 150px;
+          height: 150px;
+          padding: 0.5em;
+          border: #0000ff 3px solid;
+        }
+
+/*DRAGGABLE */
+        #coffeebeans{
+          width: 150px;
+          height: 150px;
+          padding: 0.5em;
+          background-color: #D2691E;
+        }
+
+/*DROPPABLE */
+        .coffeefilter{
+          width: 150px;
+          height: 150px;
+          padding: 0.5em;
+          border: #A0522D 4px dashed;
+        }
+
+/*STYLE */
+        #coffeefilter{
+          width: 150px;
+          height: 150px;
+          padding: 0.5em;
+        }
+
+        #cottoncandy{
+          width: 300px;
+          height: 300px;
+          padding: 0.5em;
+        }
+
+        .pinkcotton{
+          width: 150px;
+          height: 150px;
+          padding: 0.5em;
+          background-image:
+          linear-gradient(
+             to left, 
+             #FF69B4,
+             #FFB6C1
+            );
+        }
+
+        .pinkcotton2{
+          width: 150px;
+          height: 150px;
+          padding: 0.5em;
+          background-image:
+          linear-gradient(
+             to left, 
+             #FF69B4,
+             #FFB6C1
+            );
+        }
+
+        .rainbow{
+          background-image:
+          linear-gradient(
+              to right, 
+              red, 
+              #f06d06, 
+              rgb(255, 255, 0), 
+              green
+            );
+        }
+
+        #landfill{
+          width: 150px;
+          height: 150px;
+          padding: 0.5em;
+          border: #000000 4px solid;
+          color: #000000;
+        }
+
+        .destroy{
+          background-color: #000000;
+          width: 150px;
+          height: 150px;
+          padding: 0.5em;
+          color: #ffffff !important;
+        }
+
+/*TO FROM KEY FRAME */
+        @keyframes sunset{
+          from{
+            background-color: red;
+            margin-left: 600px;
+          }
+          to{
+            background-color:yellow;
+            margin-left: 0px;
+          }
+        }
+
+        .sunset{
+          width: 150px;
+          height: 150px;
+          background-color: red;
+          animation-name: sunset;
+          animation-duration: 4s;
+        }
+
+        #sunsetdrag{
+          width: 150px;
+          height: 150px;
+          border: orange 4px solid;
+        }
+
+        #sunsetblock{
+          width: 200px;
+          height: 200px;
+        }
+
+/*PERCENTANGE KEY FRAME */
+        @keyframes movingRainbow{
+          0%{
+            background-color:red; 
+            left:0px; 
+            top:0px;
+          }
+
+          25%{
+            background-color:yellow; 
+            left:200px; 
+            top:0px;
+          }
+          
+          50%{
+            background-color:blue; 
+            left:200px; 
+            top:200px;
+          }
+
+          75%{
+            background-color:green; 
+            left:0px; 
+            top:200px;
+          }
+
+          100%{
+            background-color:red; 
+            left:0px; 
+            top:0px;
+          }
+
+        }
+
+        .rainbowMoving{
+          width: 150px;
+          height: 150px;
+          position: relative;
+          background-color: white;
+          animation-name: movingRainbow;
+          animation-duration: 5s;
+        }
+
+        #movingRainbowDrag{
+          width: 100px;
+          height: 100px;
+          border: black 4px solid;
+        }
+
+        #movingRainbowBlock{
+          width: 100px;
+          height: 100px;
+          border: black 4px solid;
+        }
+
+  		</style>
+
+      <script>
+
+        $(function(){
+          $('#draggable').draggable();
+          $('#droppable').droppable({
+            drop: function(event, ui){
+              $(this)
+              .addClass("sorbet1")
+              .find("p")
+              .html("Dropped!");
+            }
+          });
+
+/*DISABLED */
+          $('#droppable2').droppable({
+            disabled: "true",
+            drop: function(event, ui){
+              $(this)
+              .addClass("sorbet2")
+              .find("p")
+              .html("Dropped!");
+            }
+          });
+
+/*TOLERANCE */
+          $('#droppable3').droppable({
+            tolerance: 'touch',
+            drop: function(event, ui){
+              $(this)
+              .addClass("sorbet3")
+              .find("p")
+              .html("Dropped with a touch!");
+            }
+          });
+
+          $('#droppable4').droppable({
+            tolerance: 'fit',
+            drop: function(event, ui){
+              $(this)
+              .addClass("sorbet4")
+              .find("p")
+              .html("Dropped only when full fit!");
+            }
+          });
+
+/*ACCEPT */
+       $('#draggable-blue').draggable();
+          $('#droppable5').droppable({
+            accept: '.blue-border',
+            drop: function(event, ui){
+              $(this)
+              .addClass("blue-border")
+              .find("p")
+              .html("Complete!");
+            }
+          });
+
+/*SCOPE */
+      $('#coffeebeans').draggable({scope:"coffeefilter"});
+          $('#coffeefilter').droppable({
+            scope: 'coffeefilter',
+            drop: function(event, ui){
+              $(this)
+              .addClass("coffeefilter")
+              .find("p")
+              .html("Complete!");
+            }
+          });
+
+/*ACTIVE CLASS HOVER CLASS */
+        $('#cottoncandy').droppable({
+            activeClass:"pinkcotton",
+            hoverClass:"rainbow",
+            drop: function(event, ui){
+              $(this)
+              .addClass("pinkcotton2")
+              .find("p")
+              .html("i'm pink!");
+            }
+          });
+
+/*DESTROY*/ 
+        $('#landfill').droppable({
+            hoverClass:"rainbow",
+            drop: function(event, ui){
+            $(this).html(ui.draggable.remove().html());
+                  $(this).droppable('destroy');
+                  $( this )
+                  .addClass( "destroy" )
+                  .find( "p" )
+                  .html( "i'm destroyed!" );
+            }
+          });
+         
+         $('#sunsetdrag').draggable();
+          $('#sunsetblock').droppable({
+            drop: function(event, ui){
+              $(this)
+              .addClass("sunset")
+              .find("p")
+              .html("Sunset!");
+            }
+          });
+
+         $('#movingRainbowDrag').draggable();
+          $('#movingRainbowBlock').droppable({
+            drop: function(event, ui){
+              $(this)
+              .addClass("rainbowMoving")
+              .find("p")
+              .html("I'm a moving rainbow!");
+            }
+          });
+
+        });
+
+      </script>
+	</head>
+
+	<body>
+
+		<div id= "draggable" class="ui-widget-content">
+			<p> Drag me around! </p>
+		</div>
+
+    <div id= "droppable" class="ui-widget-header">
+      <p> Drop here! </p>
+    </div>
+
+    <div id= "droppable2" class="ui-widget-header">
+      <p> Can't be dropped! </p>
+    </div>
+
+<!--TOLERANCE -->
+   <div id= "droppable3" class="ui-widget-header">
+      <p> Tolerance Touch </p>
+    </div>
+
+    <div id= "droppable4" class="ui-widget-header">
+      <p> Tolerance Fit! </p>
+    </div>
+
+<!--ACCEPT -->
+    <div id= "draggable-blue" class="blue-border">
+      <p> Blue Border! </p>
+    </div>
+
+    <div id= "droppable5" class="ui-widget-header">
+      <p> I only accept Blue Border! </p>
+    </div>  
+
+<!--SCOPE -->
+    <div id= "coffeebeans">
+      <p> I'm coffee beans looking for coffee filter. </p>
+    </div> 
+
+    <div id= "coffeefilter">
+      <p> I'm coffee filter waiting for coffee beans. </p>
+    </div> 
+
+<!--ACTIVE CLASS HOVER CLASS -->
+    <div id= "cottoncandy">
+      <p> waiting for a rainbow to happen... </p>
+    </div> 
+
+<!--DESTROY -->
+    <div id= "landfill">
+      <p> going to get destroyed </p>
+    </div> 
+
+<!--TO FROM KEYFRAME -->
+    <div id= "sunsetdrag">
+      <p> drag me to sunset </p>
+    </div> 
+
+    <div id= "sunsetblock">
+      <p>waiting for sunset... </p>
+    </div> 
+
+<!--PERCENTAGE KEYFRAME-->
+    <div id= "movingRainbowDrag">
+      <p> drag me to a moving rainbow </p>
+    </div> 
+
+    <div id= "movingRainbowBlock">
+      <p>waiting for moving rainbow... </p>
+    </div> 
+
+	</body>
+</html

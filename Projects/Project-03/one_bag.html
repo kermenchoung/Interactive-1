@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <title>IKEA</title>
+
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+
+    <link href="css/style.css" media="all" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="script.js"></script>
+
+   <style> #draggable{ 
+                width: 150px;
+                height: 50px;
+                padding: 0.5em;
+          background-color: blue;
+          font-style: sans-serif;
+          color: yellow;
+             }
+
+
+             #landfill{
+          width: 150px;
+          height: 150px;
+          padding: 0.5em;
+          border: #000000 4px solid;
+          color: black;
+        }
+
+        .destroy{
+          background-color: pink;
+          width: 150px;
+          height: 150px;
+          padding: 0.5em;
+          color: solid red!important;
+        }
+</style>
+<script>
+
+ $('#landfill').droppable({
+            hoverClass:"rainbow",
+            drop: function(event, ui){
+            $(this).html(ui.draggable.remove().html());
+                  $(this).droppable('destroy');
+                  $( this )
+                  .addClass( "destroy" )
+                  .find( "p" )
+                  .html( "i'm destroyed!" );
+            }
+          });
+         
+
+     </script>
+
+
+
+
+
+
+
+</style>
+
+
+
+
+</head>
+<body>
+
+<div class="smallbag" style="margin-top:55px; margin-left: -20px;">
+<img src="smallbag.png">
+</div>
+
+
+
+</body>
+</html>
+
+
+
+
+

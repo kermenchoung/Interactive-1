@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+  		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  		<script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+
+  		<style>
+  			#draggable{ 
+  				width: 150px;
+  				height: 150px;
+  				padding: 0.5em;
+          background-color: #0000ff;
+          font-style: sans-serif;
+          color: #ffffff;
+  			 }
+
+         #droppable{
+           width: 150px;
+          height: 150px;
+          padding: 0.5em;
+          background-color: #ffffff;
+          border: #000000 1px solid;
+          font-style: sans-serif;
+          color: #000000;
+         }
+
+         #draggable:hover{
+          cursor: cell;
+         }
+
+
+  		</style>
+
+      <script>
+
+        $(function(){
+          $('#draggable').draggable();
+          $('#droppable').droppable();
+        });
+
+      </script>
+	</head>
+
+	<body>
+
+		<div id= "draggable" class="ui-widget-content">
+			<p> Drag me around! </p>
+		</div>
+
+    <div id= "droppable" class="ui-widget-header">
+      <p> Drop here! </p>
+    </div>
+
+	</body>
+</html
