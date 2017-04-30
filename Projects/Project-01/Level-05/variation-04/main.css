@@ -10,31 +10,31 @@ body {background-color: powderblue;}
 
 
 .box {
-	transition: background 2s ease;
-	background: solid red;
-    width:300px;
+	
+
+
+      border-style: solid;
+      display: inline-block;
+
+    border-width: 1px;
+    display: block;
+    width: 300px;
     height: 300px;
-    display: inline-block;
     text-align: center;
+    background-color: #0000FF;
+    -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
   }
 
 .right{float:right;
     
-    
-}
+   }
 
-.circle{
-transition: background 2s ease;
-width: 100px;
-height: 100px;
-background: solid red;
--moz-border-radius: 50px;
--webkit-border-radius: 50px;
-border-radius: 50px;
-float: left;
-margin: 15px;
-}
-.circle:hover{
-background: solid black;
+.box:hover {
+    background-color: #FFCCCC;
+    width: 300px;
+    height: 300px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
