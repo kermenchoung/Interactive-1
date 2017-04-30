@@ -1,4 +1,4 @@
-function randomMargin(){
+//function randomMargin(){
     var randomnumber1=Math.floor(Math.random()*101) - 50;
     var randomnumber2=Math.floor(Math.random()*101) - 50;
     console.log(randomnumber1)
