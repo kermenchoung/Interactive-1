@@ -1,0 +1,163 @@
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"> -->
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+
+
+
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="Full Screen">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+       <a href="javascript:location.reload(true)">Refresh this page</a> 
+        <style>
+            html,body{ height: 100%; }
+            section { display: inline-block; vertical-align: middle; }
+            #draggables { width: 78%; }
+            #draggables img { /*width: 100%;*/ display: block; margin-bottom: 15px; top: 400px; left: 500px; cursor: -webkit-grab; cursor: grab; }
+            #draggables img:active { cursor: -webkit-grabbing; cursor: grabbing; }
+            #droppable { border: px ;  width: 18%; height: 100%; position:fixed; right: 5px; left: 740px; }
+            .smallbag { float: left; }
+        
+
+        </style>
+    </head>
+    <body>
+ <body background="field.png" style=" background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover">
+
+ <div id="Endgame">
+
+ <p style="color: white; font-size: 80px ;font-family: AbelPro; src: url( 'MADType - AbelPro.otf' ); position: fixed">ENDGAME</p>
+ 
+
+</div>
+
+ <!--<body background="field.png" style="height: 100%, background-position: center center ; background-repeat: no-repeat; background-attachment: fixed; ">-->
+
+ 
+
+   
+
+
+          
+   <!-- <button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>-->
+
+
+
+
+
+
+
+<script>
+
+
+$(document).ready(function(){
+       $('.drag').draggable();
+       $('.drag').click(function(){
+       });
+       });
+
+     window.alert("Every second there are about 20 visitors of IKEA worldwide. Each of the visitors is given a standard shopping bag at the entrance. Each purchase contributes to the construction of a new store at the suburbs of big cities. Dublin is one of them. Help me to clean this field in my neighbourhood from the bags. Drop them to the Bin...Only to experience helplessness and inevitability of Endgame which is coming soon.");
+
+
+
+
+
+
+function myFunction() {
+    var d = new Date();
+    var n = d.getTime();
+    document.getElementById("demo").innerHTML = n;
+}
+
+
+
+var bags = [];
+
+$(document).ready(function(){
+    document.addEventListener("gesturestart", function(e){ e.preventDefault(); });
+    $("#draggables img").draggable();
+    bags.push($("#draggables img"));
+
+     $("#droppable").draggable();
+
+    $("#droppable").droppable({
+        drop: function(event, ui){
+            bags.splice(bags.indexOf($(ui.draggable)));
+            $(ui.draggable).remove();
+            setTimeout(function() { 
+                for(var i=0;i<20;i++)
+                {
+                    function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+                    var img = $('<img class="smallbag">');
+                    img.attr('src', 'smallbag.png'); //$(this).imgurl);
+                    img.appendTo("#draggables");
+                    bags.push(img);
+                    //img.draggable();
+                    //$(this).html(ui.draggable.remove().html());
+                }
+                $("#draggables img").draggable();
+                
+
+            }, 1000);
+            //$("#draggables img").hide();
+
+
+        }
+
+
+    });
+
+
+    setInterval(function() {  
+        for(var i=0;i<bags.length; i++)
+        {
+            //bags[i].
+        }
+    }, 100);
+
+
+
+
+
+
+});
+
+
+
+</script>
+        <section id="draggables">
+            <img src="smallbag.png" />
+        </section>
+
+        <section id="droppable">
+            <img src="bin.png" />
+        </section>
+
+       
+
+
+
+
+
+       
+    </body>
+</html>
+
+
+
+

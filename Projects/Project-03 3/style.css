@@ -1,0 +1,13 @@
+.smallbag{
+   border:1px solid red;   
+}
+
+.droppable{
+
+	position: fixed;
+top: 300px;
+right: 0px;
+height: 300px;
+width: 300px;
+
+}
