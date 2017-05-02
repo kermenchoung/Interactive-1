@@ -37,11 +37,19 @@
 
  <div id="Endgame">
 
- <p style="color: white; font-size: 80px ;font-family: AbelPro; src: url( 'MADType - AbelPro.otf' ); position: fixed"></p>
+ <p style="color: white; font-size: 80px ;font-family: AbelPro; src: url( 'MADType - AbelPro.otf' ); position: fixed">ENDGAME</p>
 
 
 </div>
 
+<div id="instructions-1">
+    <p style="color: white; font-size: 40px ;font-family: AbelPro; src: url( 'MADType - AbelPro.otf' );">Try to clean up the IKEA bags!</p>
+</div>
+
+
+<div id="IKEASymbolDiv" style="background-image: #FFFFFF; width: 150px; height: 100%; border: solid black 5px; "> 
+<!--PUT IKEA SYMBOLS HERE -->
+</div>
 
 <form>
 <input style="width: 300px; padding: 20px; cursor: pointer; box-shadow: 6px 6px 5px; #999; -webkit-box-shadow: 6px 6px 5px #999; -moz-box-shadow: 6px 6px 5px #999; font-weight: bold; background: #ffff00; color: #000; border-radius: 10px; border: 1px solid #999; font-size: 150%;" type="button" value="Do you speak human?" onclick="window.location.href='http://doyouspeakhuman.com/'" />
@@ -59,11 +67,12 @@
 
 <p id="demo"></p>-->
 
+<!--
  <a class="twitter-timeline"  href="https://twitter.com/hashtag/ikea" data-widget-id="857053528270880769">#ikea Tweets</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
-
+-->
 
 
 
@@ -90,11 +99,13 @@ function myFunction() {
     document.getElementById("demo").innerHTML = n;
 }
 
-
+var j=0;
 
 var bags = [];
 
 $(document).ready(function(){
+
+    $("#IKEASymbolDiv").hide();
 
     $("#draggables img").draggable();
     bags.push($("#draggables img"));
@@ -103,14 +114,21 @@ $(document).ready(function(){
 
     $("#droppable").droppable({
         drop: function(event, ui){
+
             bags.splice(bags.indexOf($(ui.draggable)));
             $(ui.draggable).remove();
             setTimeout(function() {
+
+
+
                 for(var i=0;i<20;i++)
                 {
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
+
+    
+ 
                     var img = $('<img class="smallbag">'),
                         left = getRandomInt(0, window.innerWidth),
                         top = getRandomInt(0, window.innerHeight);
@@ -120,9 +138,20 @@ function getRandomInt(min, max) {
                     bags.push(img);
                     //img.draggable();
                     //$(this).html(ui.draggable.remove().html());
+              
+                 j = j+1;
                 }
                 $("#draggables img").draggable();
 
+
+                console.log(j);
+
+                if (j === 100){
+                    //window.alert("one hundred");
+
+                    $("#IKEASymbolDiv").show();
+                    $("#instructions-1").hide();
+                }
 
             }, 1000);
             //$("#draggables img").hide();

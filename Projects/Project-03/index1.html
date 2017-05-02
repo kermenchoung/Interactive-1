@@ -100,17 +100,19 @@ $(document).ready(function(){
                 for(var i=0;i<20;i++)
                 {
                     function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
+                     return Math.floor(Math.random() * (max - min + 1) + min);
+                    }
                     var img = $('<img class="smallbag">');
                     img.attr('src', 'smallbag.png'); //$(this).imgurl);
                     img.appendTo("#draggables");
                     bags.push(img);
                     //img.draggable();
                     //$(this).html(ui.draggable.remove().html());
+                    console.log(img);
                 }
                 $("#draggables img").draggable();
                 
+
 
             }, 1000);
             //$("#draggables img").hide();
