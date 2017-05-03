@@ -29,12 +29,7 @@
             #droppable { border: px ;  width: 250px; height: 300px; position:fixed; right: 5px; left: 740px; }
             .smallbag { float: left; }
 
-            #IKEASymbolDiv{
-                width: 150px; 
-                height: 150px; 
-                border: solid black 5px;
-                z-index: 10;
-            }
+
         </style>
     </head>
     <body>
@@ -52,20 +47,12 @@
 </div>
 
 
-
-<div id="IKEASymbolDiv"> 
-    <div class="icons"><img src="shovel.png"></div>
-
-</div>
+<div id="IKEASymbolDiv" style="background-image: #FFFFFF; width: 150px; height: 100%; border: solid black 5px; "> 
+<div class="icons"><img src="shovel.png"></div>
 
 
-
-<!-- <div id="IKEASymbolDiv" style="background-image: #FFFFFF; width: 150px; height: 100%; border: solid black 5px; "> 
-    <div class="icons"><img src="shovel.png"></div>
-
-</div> -->
 <!--PUT IKEA SYMBOLS HERE -->
-
+</div>
 
 <!--<form>
 <input style="width: 300px; padding: 20px; cursor: pointer; box-shadow: 6px 6px 5px; #999; -webkit-box-shadow: 6px 6px 5px #999; -moz-box-shadow: 6px 6px 5px #999; font-weight: bold; background: #ffff00; color: #000; border-radius: 10px; border: 1px solid #999; font-size: 150%;" type="button" value="Do you speak human?" onclick="window.location.href='http://doyouspeakhuman.com/'" />
@@ -122,29 +109,13 @@ var bags = [];
 $(document).ready(function(){
 
     $("#IKEASymbolDiv").hide();
+
+
+
     
-
-
-
-    // $('#IKEASymbolDiv').draggable({
-           
-    //         drop: function(event, ui){
-    //         $(this).html(ui.draggable.remove().html());
-    //               $(this).draggables('destroy');
-    //               $( this )
-    //               .addClass( "destroy" )
-    //               .find( "p" )
-    //               .html( "i'm destroyed!" );
-    //         }
-    //       });
-    
-
-
 
     $("#draggables img").draggable();
     bags.push($("#draggables img"));
-
-
 
      $("#droppable").draggable();
 
@@ -177,12 +148,6 @@ function getRandomInt(min, max) {
               
                  j = j+1;
                 }
-
-
-
-
-
-
                 $("#draggables img").draggable();
 
 
@@ -219,19 +184,9 @@ function getRandomInt(min, max) {
 
 });
 
-$(function(){
-          $('.icons').draggable();
-          $('.smallbag').droppable({
-            drop: function(event, ui){
-              $(this)
-              .hide("")
-            }
-          });
 
-        });
 
 </script>
-
 
 
 
