@@ -111,6 +111,32 @@ $(document).ready(function(){
 
     $("#IKEASymbolDiv").hide();
 
+     $('#IKEASymbolDiv').droppable({
+            hoverClass:"rainbow",
+            drop: function(event, ui){
+            $(this).html(ui.draggable.remove().html());
+                  $(this).droppable('destroy');
+                  $( this )
+                  .addClass( "destroy" )
+                  .find( "p" )
+                  .html( "i'm destroyed!" );
+            }
+          });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     $("#draggables img").draggable();
     bags.push($("#draggables img"));
 
@@ -184,6 +210,8 @@ function getRandomInt(min, max) {
 
 
 </script>
+
+
 
 
         <section id="droppable">
