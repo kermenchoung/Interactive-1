@@ -202,7 +202,7 @@ $(document).ready(function(){
 
      $('#shovelIcon').draggable({
            
-           drag: function(event, ui){
+             stop: function(event, ui){
              $('#bagZero').remove();
                   
              }
@@ -211,7 +211,7 @@ $(document).ready(function(){
 
     $('#refIcon').draggable({
        
-        drag: function(event, ui){
+         stop: function(event, ui){
          $('#bagOne').remove();
               
          }
@@ -220,7 +220,7 @@ $(document).ready(function(){
 
       $('#duchampIcon').draggable({
        
-     drag: function(event, ui){
+         stop: function(event, ui){
          $('#bagTwo').remove();
               
          }
