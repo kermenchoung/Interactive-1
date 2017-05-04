@@ -35,11 +35,12 @@
                 height: 500px; 
                 border: solid black 5px;
                 z-index: 10;
+                background-color: rgba(0,0,0,.5);
             }
 
             #instructions-1{  }
 
-             @keyframes sunset{
+           @keyframes sunset{
           from{
             background-color: red;
             margin-right: 600px;
@@ -113,6 +114,7 @@
 
     <div id="shovelIcon" class="icons"><img src="shovel.png"></div>
         <div id="refIcon" class="icons"><img src="ref.png"></div>
+
         <div id="duchampIcon" class="icons"><img src="duchamp.png"></div>
 
 </div>
@@ -155,6 +157,9 @@
 
 
 <script>
+
+
+
 
 $('#sunsetdrag').draggable();
           $('#sunsetblock').droppable({
@@ -202,17 +207,25 @@ $(document).ready(function(){
 
      $('#shovelIcon').draggable({
            
-           drag: function(event, ui){
+           stop: function(event, ui){
              $('#bagZero').remove();
+
+
                   
              }
            });
 
 
+
+
     $('#refIcon').draggable({
+
+
+
        
         drag: function(event, ui){
          $('#bagOne').remove();
+
               
          }
        });
@@ -220,7 +233,7 @@ $(document).ready(function(){
 
       $('#duchampIcon').draggable({
        
-     drag: function(event, ui){
+     stop: function(event, ui){
          $('#bagTwo').remove();
               
          }
