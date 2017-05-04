@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+  		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  		<script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+
+  		<style>
+  			#draggable, #draggable2{ 
+  				width: 150px;
+  				height: 150px;
+  				padding: 0.5em;
+          background-color: #0000ff;
+          font-style: sans-serif;
+          color: #ffffff;
+  			 }
+
+         #draggable:hover{
+          cursor: cell;
+         }
+
+          #draggable2:hover{
+          cursor: wait;
+         }
+  		</style>
+
+      <script>
+
+        $(function(){
+          $('#draggable').draggable();
+          $('#draggable2').draggable();
+        });
+
+      </script>
+	</head>
+
+	<body>
+
+		<div id= "draggable" class="ui-widget-content">
+			<p> Drag me around! </p>
+		</div>
+
+    <div id= "draggable2" class="ui-widget-content">
+      <p> Drag me too! </p>
+    </div>
+
+	</body>
+</html

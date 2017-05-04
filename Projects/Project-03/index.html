@@ -21,27 +21,46 @@
         <style>
             html,body{ height: 100%; }
             section { display: inline-block; vertical-align: middle; }
+
+
             #draggables { width: 78%; }
             #draggables img { /*width: 100%;*/ display: block; margin-bottom: 15px; top: 400px; left: 500px; cursor: -webkit-grab; cursor: grab; position: absolute; }
             #draggables img:active { cursor: -webkit-grabbing; cursor: grabbing; }
             #droppable { border: px ;  width: 250px; height: 300px; position:fixed; right: 5px; left: 740px; }
-            .smallbag { float: left; }
+            .smallbag { float: left; z-index: 8; }
+            #Endgame {position: absolute; right: 5px; left: 740px; }
 
             #IKEASymbolDiv{
                 width: 150px; 
-                height: 150px; 
+                height: 500px; 
                 border: solid black 5px;
                 z-index: 10;
             }
 
-            .announcement {
-    display: none;
-    background: yellow;
-    margin-top: 40px;
-    font-size: 24px;
-    padding: 6px;
-}
+            #instructions-1{  }
 
+
+             .sunset{
+          width: 150px;
+          height: 150px;
+          background-color: red;
+          animation-name: sunset;
+          animation-duration: 4s;
+        }
+
+        #sunsetdrag{
+          width: 150px;
+          height: 150px;
+          border: orange 4px solid;
+        }
+
+        #sunsetblock{
+          width: 200px;
+          height: 200px;
+        }
+
+            https://twitter.com/tinatbh/status/859100112051724290/photo/1
+           
 
 
 
@@ -50,6 +69,17 @@
         </style>
     </head>
     <body>
+
+    <div id= "sunsetdrag">
+      <p> drag me to sunset </p>
+    </div> 
+
+    <div id= "sunsetblock">
+      <p>waiting for sunset... </p>
+    </div> 
+
+    <div clss="sunset"></div>
+    
  <body background="field.png" style=" background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover">
 
  <div id="Endgame">
@@ -59,32 +89,23 @@
 
 </div>
 
-<div id="instructions-1">
-    <p style="color: white; font-size: 40px ;font-family: AbelPro; src: url( 'MADType - AbelPro.otf' );">Try to clean up the IKEA bags!</p>
-</div>
+
 
 
 
 <div id="IKEASymbolDiv"> 
-    <div class="icons"><img src="shovel.png">
 
-    <button>Let's go</button>
-
-<div class="announcement">
-   <span>Ikea is building refugee camps</span>
+<div id="instructions-1">
+    <p style="color: white; font-size: 20px ;font-family: AbelPro; src: url( 'MADType - AbelPro.otf' );">Now try to clean up the IKEA bags!</p>
 </div>
 
-    </div>
+    <div class="icons"><img src="shovel.png"></div>
         <div class="icons"><img src="ref.png"></div>
-            <div class="icons"><img src="duchamp.png"></div>
+        <div class="icons"><img src="duchamp.png"></div>
 
 </div>
 
-<button>Let's go</button>
 
-<div class="announcement">
-   <span>Ikea is building refugee camps</span>
-</div>
 
 
 
@@ -123,6 +144,17 @@
 
 <script>
 
+ $('#sunsetdrag').draggable();
+          $('#sunsetblock').droppable({
+            drop: function(event, ui){
+              $(this)
+              .addClass("sunset")
+              .find("p")
+              .html("Sunset!");
+            }
+          });
+
+
 
 // $(document).ready(function(){
 //        $('.drag').draggable();
@@ -133,9 +165,7 @@
      window.alert("Every second there are about 20 visitors of IKEA worldwide. Each of the visitors is given a standard shopping bag at the entrance. Each purchase contributes to the construction of a new store at the suburbs of big cities. Dublin is one of them. Help me to clean this field in my neighbourhood from the bags. Drop them to the Bin...Only to experience helplessness and inevitability of Endgame which is coming soon.");
 
 
-$('button').click(function() {
-    $('.announcement').toggle();
-});
+
 
 
 
@@ -224,7 +254,7 @@ function getRandomInt(min, max) {
                     //window.alert("one hundred");
 
                     $("#IKEASymbolDiv").show();
-                    $("#instructions-1").hide();
+                    $("#instructions-1").show();
                 }
 
             }, 1000);
