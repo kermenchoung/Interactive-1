@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <title>
+    Exercise 5
+  </title>
+  <style>
+	  body {
+	  	margin: 0;
+	  }
+
+  	button {
+  		padding: 5px;
+  		margin: 5px;
+  		font-size: 1.0em;
+  		cursor: pointer;
+      background-color:white;
+      border:red;
+  	}
+
+
+    
+
+  	.nav {
+  		position: fixed;
+  		top:100px;
+  		left:0;
+  		background-color: #FFF;
+  		padding: 15px;
+  	}
+
+    .box {
+    	height: 800px;
+    	color: #FFF;
+    	background-size: cover;
+    	background-position: center center;
+    	text-align: center;
+    	padding: 25px;
+    }
+
+    .s1 {background-image: url('assets/01.jpg');}
+    .s2 {background-image: url('assets/02.jpg');}
+    .s3 {background-image: url('assets/03.jpg');}
+    .s4 {background-image: url('assets/04.jpg');}
+    .s5 {background-image: url('assets/05.jpg');}
+
+  </style>
+
+  <script>
+
+
+
+
+  	$(document).ready(function(){
+
+  		$("#btn-s1").click(function() {
+			    $('html, body').animate({
+			        scrollLeft: $(".s1").offset().left
+			    }, 1000);
+			});
+
+  		$("#btn-s2").click(function() {
+			    $('html, body').animate({
+			        scrollLeft: $(".s2").offset().left
+			    }, 1000);
+			});
+
+  		$("#btn-s3").click(function() {
+			    $('html, body').animate({
+			        scrollLeft: $(".s3").offset().left
+			    }, 1000);
+			});
+
+  		$("#btn-s4").click(function() {
+			    $('html, body').animate({
+			        scrollLeft: $(".s4").offset().left
+			    }, 1000);
+			});
+
+  		$("#btn-s5").click(function() {
+			    $('html, body').animate({
+			        scrollLeft: $(".s5").offset().left
+			    }, 1000);
+			});
+
+			console.log( $(".s5").offset() );
+
+
+  	});
+    
+  </script>
+</head>
+
+<body>
+
+	<div class="nav">
+		<button id="btn-s1">s1</button><br />
+		<button id="btn-s2">s2</button><br />
+		<button id="btn-s3">s3</button><br />
+		<button id="btn-s4">s4</button><br />
+		<button id="btn-s5">s5</button><br />
+    <a href="index2.html"><button>!</button></a>
+     </div>
+  
+  
+  <div class="box s1">
+  	Section 1
+  </div>
+  
+  <div class="box s2">
+  	Section 2
+  </div>
+  
+  <div class="box s3">
+  	Section 3
+  </div>
+  
+  <div class="box s4">
+  	Section 4
+  </div>
+  
+  <div class="box s5">
+  	Section 5
+  </div>
+  
+
+</body>
+</html>
