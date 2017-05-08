@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		<script>
+			$(document).ready(function(){
+
+			var myVideo = document.getElementById("beachy");
+
+				myVideo.pause();
+
+				$("#doorbell")[0].play();
+		/*
+				var dogAudio = $("#bark")[0];
+				dogAudio.play();
+		*/
+				var dogAudio = $("#bark")[0];
+				$("#box1").mouseenter(function(){
+					dogAudio.play();
+					myVideo.play();
+				});
+
+				$("#box1").mouseout(function(){
+					myVideo.pause();
+				});
+
+				$("#click").click(function(){
+					$("#beachy").clone().appendTo("#box1");	
+				});
+				
+			});
+
+		</script>
+
+		<style>
+		body{
+			background:black; 
+		
+		}
+
+
+	#box1{
+				width: 200px;
+				height: 200px;
+				background-image: url(assets/dog.png);
+				background-repeat: no-repeat;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="box1">
+		</div>
+
+		<audio id= "doorbell">
+			<source src="assets/doorbell.mp3" type="audio/mp3">
+		</audio>
+
+		<!--<audio controls>
+			<source src="assets/horse.ogg" type="audio/ogg">
+		</audio>
+
+		<audio autoplay>
+			<source src="assets/meow.wav" type="audio/wav">
+		</audio>-->
+
+
+		<audio id="bark">
+			<source src="assets/bark.wav" type="audio/wav">
+		</audio>
+
+		<video id="beachy" width="640" autoplay>
+			<source src="assets/turbine.mp4">
+			Sorry, your browser doesn't support HTML5 video :(
+		</video>
+
+		<a id="click"><p style="color: white; font-size: 20px ;font-family: Helvetica; ; position: fixed">CLICK ME</p></a>
+	</body>
+</html>
